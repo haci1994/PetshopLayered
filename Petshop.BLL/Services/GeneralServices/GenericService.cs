@@ -38,11 +38,11 @@ namespace Petshop.BLL.Services.GeneralServices
             return await Repository.DeleteAsync(entity);
         }
 
-        public async Task<IList<TViewModel>> GetAllAsync(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, bool asnotracking = false)
+        public async Task<List<TViewModel>> GetAllAsync(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, bool asnotracking = false)
         {
             var categoriesFromDb = await Repository.GetAllAsync(predicate, include, orderBy, asnotracking);
 
-            var categories = _mapper.Map<IList<TViewModel>>(categoriesFromDb);
+            var categories = _mapper.Map<List<TViewModel>>(categoriesFromDb);
 
             return categories.ToList();
 

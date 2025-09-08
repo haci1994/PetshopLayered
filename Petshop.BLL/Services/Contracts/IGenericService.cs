@@ -13,12 +13,12 @@ namespace Petshop.BLL.Services.Contracts
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
             bool asnotracking = false);
 
-        Task<IList<TViewModel>> GetAllAsync(
+        Task<List<TViewModel>> GetAllAsync(
             Expression<Func<TEntity, bool>>? predicate = null,
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
             bool asnotracking = false);
-
+            
         Task<TViewModel> AddAsync(TCreateViewModel entity);
 
         Task<bool> UpdateAsync(TUpdateViewModel entity);

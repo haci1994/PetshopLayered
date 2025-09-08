@@ -4,7 +4,7 @@ namespace Petshop.BLL.ViewModels.WebsiteViewModels
 {
     public class HomeViewModel
     {
-        public SiteInfoViewModel? SiteInfoViewModel { get; set; }
-        public List<CategoryViewModel> Categories { get; set; } = [];
+        public SiteInfoViewModel? SiteInfoViewModel { get; set; } = default;
+        public List<SocialViewModel>? Socials { get; set; } = [];
     }
 }
