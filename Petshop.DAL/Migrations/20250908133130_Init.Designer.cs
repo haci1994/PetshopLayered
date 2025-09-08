@@ -12,8 +12,8 @@ using Petshop.DAL.DataContext;
 namespace Petshop.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250908113555_AddingEntities")]
-    partial class AddingEntities
+    [Migration("20250908133130_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

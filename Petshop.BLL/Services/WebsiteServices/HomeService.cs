@@ -17,13 +17,15 @@ namespace Petshop.BLL.Services.WebsiteServices
         public async Task<HomeViewModel> GetHomepageData()
         {
             var siteInfo = await _siteInfoService.GetAllAsync(x => x != null);
-            var categories = await _categoryService.GetAllAsync().ToList();
+            var categories = await _categoryService.GetAllAsync();
 
             var homeViewModel = new HomeViewModel
             {
                 SiteInfoViewModel = siteInfo.FirstOrDefault(),
-                Categories = categories
+                Categories = categories.ToList()
             };
+
+            return homeViewModel;
 
         }
     }

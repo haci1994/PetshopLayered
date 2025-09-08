@@ -1,5 +1,5 @@
-using Petshop.DAL;
 using Petshop.DAL.DataContext;
+using Petshop.BLL;
 
 namespace Petshop.MVC
 
@@ -13,7 +13,7 @@ namespace Petshop.MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDALServices(builder.Configuration);
+            builder.Services.BllServices(builder.Configuration);
 
             var app = builder.Build();
 

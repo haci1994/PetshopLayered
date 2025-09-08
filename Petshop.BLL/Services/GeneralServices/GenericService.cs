@@ -44,7 +44,7 @@ namespace Petshop.BLL.Services.GeneralServices
 
             var categories = _mapper.Map<IList<TViewModel>>(categoriesFromDb);
 
-            return categories;
+            return categories.ToList();
 
         }
 

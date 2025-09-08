@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Petshop.BLL\Petshop.BLL.csproj" />
     <ProjectReference Include="..\Petshop.DAL\Petshop.DAL.csproj" />
   </ItemGroup>
 

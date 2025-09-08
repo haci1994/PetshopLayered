@@ -32,9 +32,15 @@ namespace Petshop.BLL.Mapping
             CreateMap<Review, CreateReviewViewModel>().ReverseMap();
             CreateMap<Review, UpdateReviewViewModel>().ReverseMap();
 
-            CreateMap<SiteInfo, SiteInfoViewModel>().ReverseMap();
-            CreateMap<SiteInfo, CreateSiteInfoViewModel>().ReverseMap();
-            CreateMap<SiteInfo, UpdateSiteInfoViewModel>().ReverseMap();
+            CreateMap<SiteInfo, SiteInfoViewModel>()
+                .ForMember(dest => dest.Logo, opt => opt.MapFrom(src => src.LogoUrl))
+                .ReverseMap();
+            CreateMap<SiteInfo, CreateSiteInfoViewModel>()
+                .ForMember(dest => dest.Logo, opt => opt.MapFrom(src => src.LogoUrl))
+                .ReverseMap();
+            CreateMap<SiteInfo, UpdateSiteInfoViewModel>()
+                .ForMember(dest => dest.Logo, opt => opt.MapFrom(src => src.LogoUrl))
+                .ReverseMap();
 
             CreateMap<Social, SocialViewModel>().ReverseMap();
             CreateMap<Social, CreateSocialViewModel>().ReverseMap();
