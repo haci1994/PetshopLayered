@@ -16,6 +16,9 @@ namespace Petshop.DAL.DataContext
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<SiteInfo> SiteInfos { get; set; }
+        public DbSet<Social> Socials { get; set; }
+        public DbSet<Slide> Slides { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

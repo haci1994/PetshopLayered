@@ -15,13 +15,13 @@ namespace Petshop.DAL.DataContext.Repositories
             DbContext = dbContext;
         }
 
-        public async Task AddAsync(T entity)
+        public virtual async Task AddAsync(T entity)
         {
             await DbContext.Set<T>().AddAsync(entity);
             await DbContext.SaveChangesAsync();
         }
 
-        public virtual async Task Delete(T entity)
+        public virtual async Task<bool> DeleteAsync(T entity)
         {
             var existingEntity = await DbContext.Set<T>().FindAsync(entity.Id);
 
@@ -29,7 +29,10 @@ namespace Petshop.DAL.DataContext.Repositories
             {
                 DbContext.Set<T>().Remove(existingEntity);
                 await DbContext.SaveChangesAsync();
+                return true;
             }
+
+            return false;
 
         }
 
@@ -85,7 +88,7 @@ namespace Petshop.DAL.DataContext.Repositories
             return entity;
         }
 
-        public virtual async Task Update(T entity)
+        public virtual async Task<bool> UpdateAsync(T entity)
         {
             var existingEntity = await DbContext.Set<T>().FindAsync(entity.Id);
 
@@ -93,7 +96,10 @@ namespace Petshop.DAL.DataContext.Repositories
             {
                 DbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
                 await DbContext.SaveChangesAsync();
+                return true;
             }
+
+            return false;
         }
     }
 }

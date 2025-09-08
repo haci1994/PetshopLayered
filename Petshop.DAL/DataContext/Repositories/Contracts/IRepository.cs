@@ -21,8 +21,8 @@ namespace Petshop.DAL.DataContext.Repositories.Contracts
 
         Task AddAsync(T entity);
 
-        Task Update(T entity);
+        Task<bool> UpdateAsync(T entity);
 
-        Task Delete(T entity);
+        Task<bool> DeleteAsync(T entity);
     }
 }

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petshop.MVC", "Petshop.MVC\Petshop.MVC.csproj", "{E938C8BC-48A4-488F-8475-745C0E8EAF95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petshop.DAL", "Petshop.DAL\Petshop.DAL.csproj", "{469C5A46-AE63-4D0F-BA89-8C647F0E7F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petshop.BLL", "Petshop.BLL\Petshop.BLL.csproj", "{73B4DCD9-00FB-4B54-8FC2-2C0B9575BF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{469C5A46-AE63-4D0F-BA89-8C647F0E7F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{469C5A46-AE63-4D0F-BA89-8C647F0E7F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{469C5A46-AE63-4D0F-BA89-8C647F0E7F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B4DCD9-00FB-4B54-8FC2-2C0B9575BF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B4DCD9-00FB-4B54-8FC2-2C0B9575BF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B4DCD9-00FB-4B54-8FC2-2C0B9575BF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B4DCD9-00FB-4B54-8FC2-2C0B9575BF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
