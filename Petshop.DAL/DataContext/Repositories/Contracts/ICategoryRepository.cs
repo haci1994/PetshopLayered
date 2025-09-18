@@ -10,4 +10,5 @@ namespace Petshop.DAL.DataContext.Repositories.Contracts
     public interface ICategoryRepository : IRepository<Category>
     {
     }
+
 }

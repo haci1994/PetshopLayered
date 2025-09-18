@@ -49,6 +49,14 @@ namespace Petshop.BLL.Mapping
             CreateMap<Slide, SlideViewModel>().ReverseMap();
             CreateMap<Slide, CreateSlideViewModel>().ReverseMap();
             CreateMap<Slide, UpdateSlideViewModel>().ReverseMap();
+
+            CreateMap<Blog, BlogViewModel>().ReverseMap();
+            CreateMap<Blog, CreateBlogViewModel>().ReverseMap();
+            CreateMap<Blog, UpdateBlogViewModel>().ReverseMap();
+
+            CreateMap<BlogComment, BlogCommentViewModel>().ReverseMap();
+            CreateMap<BlogComment, CreateBlogCommentViewModel>().ReverseMap();
+            CreateMap<BlogComment, UpdateBlogCommentViewModel>().ReverseMap();
         }
     }
 }

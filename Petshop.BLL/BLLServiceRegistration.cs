@@ -38,6 +38,8 @@ namespace Petshop.BLL
             services.AddScoped<ISiteInfoService, SiteInfoService>();
             services.AddScoped<ISocialService, SocialService>();
             services.AddScoped<ISlideService, SlideService>();
+            services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IBlogCommentService, BlogCommentService>();
             services.AddScoped<HomeService>();
 
             return services;
