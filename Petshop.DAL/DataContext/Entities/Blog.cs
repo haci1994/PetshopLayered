@@ -4,6 +4,8 @@
     {
         public required string Title { get; set; }
 
+        public string? ShortDescription { get; set; }
+
         public required string Content { get; set; }
         
         public string? ImageUrl { get; set; }

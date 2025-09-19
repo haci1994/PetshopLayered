@@ -41,6 +41,7 @@ namespace Petshop.BLL
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<IBlogCommentService, BlogCommentService>();
             services.AddScoped<HomeService>();
+            services.AddScoped<BlogPageService>();
 
             return services;
         }
