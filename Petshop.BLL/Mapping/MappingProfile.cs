@@ -10,6 +10,8 @@ namespace Petshop.BLL.Mapping
         {
             CreateMap<Category, CategoryViewModel>().ReverseMap();
             CreateMap<Category, CreateCategoryViewModel>().ReverseMap();
+            CreateMap<CategoryViewModel, CreateCategoryViewModel>().ReverseMap();
+            CreateMap<CategoryViewModel, UpdateCategoryViewModel>().ReverseMap();
             CreateMap<Category, UpdateCategoryViewModel>().ReverseMap();
 
             CreateMap<Product, ProductViewModel>().ReverseMap();

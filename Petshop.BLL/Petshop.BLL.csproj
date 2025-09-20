@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Petshop.DAL\Petshop.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\WebsiteServices\AdminServices\" />
+  </ItemGroup>
+
 </Project>
